@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Calculator - Smart Academic Planning</title>
+    <meta name="description" content="Plan your attendance with precision. Calculate how many classes you can skip or need to attend to reach your target.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background particles -->
+    <div class="bg-particles">
+        <div class="particle" style="left: 20%; top: 30%; animation-delay: 0s;"></div>
+        <div class="particle" style="left: 35%; top: 40%; animation-delay: -1s;"></div>
+        <div class="particle" style="left: 50%; top: 50%; animation-delay: -2s;"></div>
+        <div class="particle" style="left: 65%; top: 60%; animation-delay: -3s;"></div>
+        <div class="particle" style="left: 80%; top: 70%; animation-delay: -4s;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="nav-icon">
+                    <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h.01a1 1 0 100-2H7zm2 0a1 1 0 100 2h.01a1 1 0 100-2H9zm2 0a1 1 0 100 2h.01a1 1 0 100-2H11z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <span>Attendance Calculator</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header animate-slide-up">
+            <div class="header-icon">
+                <svg class="icon" style="width: 32px; height: 32px;" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h.01a1 1 0 100-2H7zm2 0a1 1 0 100 2h.01a1 1 0 100-2H9zm2 0a1 1 0 100 2h.01a1 1 0 100-2H11z" clip-rule="evenodd" />
+                </svg>
+            </div>
+            <h1 class="header-title">Attendance Calculator</h1>
+            <p class="header-subtitle">Plan your attendance with precision. Calculate how many classes you can skip or need to attend to reach your target.</p>
+            <div class="tags">
+                <span class="tag">Smart Planning</span>
+                <span class="tag">Academic Success</span>
+                <span class="tag">Time Management</span>
+                <span class="tag">Goal Tracking</span>
+            </div>
+        </header>
+
+        <!-- Calculator Card -->
+        <div class="card animate-slide-up">
+            <div class="card-header">
+                <h2 class="card-title">
+                    <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+                    </svg>
+                    Calculate Your Attendance
+                </h2>
+                <p class="card-description">Enter your current attendance data to get personalized recommendations</p>
+            </div>
+
+            <form id="attendanceForm">
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label class="form-label" for="totalClasses">
+                            <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Total Classes
+                        </label>
+                        <input id="totalClasses" type="number" class="form-input" placeholder="e.g., 100" min="0" step="1">
+                        <span class="form-hint">Classes conducted so far</span>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="attendedClasses">
+                            <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                            </svg>
+                            Classes Attended
+                        </label>
+                        <input id="attendedClasses" type="number" class="form-input" placeholder="e.g., 80" min="0" step="1">
+                        <span class="form-hint">Classes you attended</span>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="targetPercentage">
+                            <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+                            </svg>
+                            Target Percentage
+                        </label>
+                        <select id="targetPercentage" class="form-select">
+                            <option value="75">75%</option>
+                            <option value="80" selected>80%</option>
+                            <option value="85">85%</option>
+                            <option value="90">90%</option>
+                            <option value="95">95%</option>
+                        </select>
+                        <span class="form-hint">Required attendance %</span>
+                    </div>
+                </div>
+
+                <!-- Live Preview -->
+                <div id="livePreview" class="live-preview" style="display: none;">
+                    <div class="live-header">
+                        <h3 class="live-title">Live Preview</h3>
+                        <span id="currentBadge" class="badge">Current: 0%</span>
+                    </div>
+                    <div class="progress-info">
+                        <span>Progress to <span id="targetText">80</span>%</span>
+                        <span id="progressText">0% / 80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" id="calculateBtn" class="button button-primary" disabled>
+                        <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h.01a1 1 0 100-2H7zm2 0a1 1 0 100 2h.01a1 1 0 100-2H9zm2 0a1 1 0 100 2h.01a1 1 0 100-2H11z" clip-rule="evenodd" />
+                        </svg>
+                        <span id="calculateText">Calculate Attendance</span>
+                    </button>
+                    <button type="button" id="resetBtn" class="button button-secondary">Reset Form</button>
+                </div>
+
+                <div id="errorAlert" class="alert"></div>
+            </form>
+
+            <div id="results" class="results"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div>
+                    <div class="footer-brand">
+                        <div class="footer-brand-icon">
+                            <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h.01a1 1 0 100-2H7zm2 0a1 1 0 100 2h.01a1 1 0 100-2H9zm2 0a1 1 0 100 2h.01a1 1 0 100-2H11z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="footer-brand-text">
+                            <h3>AttendanceCalc</h3>
+                            <p>Smart Academic Planning</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Empowering students with intelligent attendance tracking and planning tools for academic success.</p>
+                    <div class="footer-badges">
+                        <span class="tag">Free Forever</span>
+                        <span class="tag">Open Source</span>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Attendance Calculator</a>
+                        <a href="#" class="footer-link">Target Planning</a>
+                        <a href="#" class="footer-link">Progress Tracking</a>
+                        <a href="#" class="footer-link">Smart Recommendations</a>
+                        <a href="#" class="footer-link">Mobile Responsive</a>
+                    </div>
+                </div>
+
+                <!-- Resources -->
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Documentation</a>
+                        <a href="#" class="footer-link">Tutorials</a>
+                        <a href="#" class="footer-link">Best Practices</a>
+                        <a href="#" class="footer-link">FAQs</a>
+                        <a href="#" class="footer-link">Support</a>
+                    </div>
+                </div>
+
+                <!-- Connect -->
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">GitHub</a>
+                        <a href="#" class="footer-link">Twitter</a>
+                        <a href="#" class="footer-link">Contact</a>
+                        <a href="#" class="footer-link">Blog</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copy">
+                    <span>© <span id="currentYear"></span> AttendanceCalc</span>
+                    <span>•</span>
+                    <span>Built with ❤️ by developers for students</span>
+                </div>
+                <div class="footer-legal">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                    <a href="#" class="footer-link">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
