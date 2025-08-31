@@ -1,0 +1,6 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Point to sitemap
+Sitemap: https://giet-attendance-calculator.vercel.app/sitemap.xml
