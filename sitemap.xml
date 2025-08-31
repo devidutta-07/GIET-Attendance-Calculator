@@ -8,7 +8,7 @@
     <priority>1.00</priority>
   </url>
 
-   Policy pages (ensure these files exist at the root for best results) 
+   <!-- Policy pages (ensure these files exist at the root for best results)  -->
   <url>
     <loc>https://giet-attendance-calculator.vercel.app/privacy-policy.html</loc>
     <lastmod>2025-08-31</lastmod>
