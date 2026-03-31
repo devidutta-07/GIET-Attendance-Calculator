@@ -80,29 +80,7 @@
 </head>
 
   <body>
-    <!-- Background particles -->
-    <div class="bg-particles">
-      <div
-        class="particle"
-        style="left: 20%; top: 30%; animation-delay: 0s"
-      ></div>
-      <div
-        class="particle"
-        style="left: 35%; top: 40%; animation-delay: -1s"
-      ></div>
-      <div
-        class="particle"
-        style="left: 50%; top: 50%; animation-delay: -2s"
-      ></div>
-      <div
-        class="particle"
-        style="left: 65%; top: 60%; animation-delay: -3s"
-      ></div>
-      <div
-        class="particle"
-        style="left: 80%; top: 70%; animation-delay: -4s"
-      ></div>
-    </div>
+
 
     <!-- Navigation -->
     <nav class="nav">
@@ -145,17 +123,12 @@
             />
           </svg>
         </div>
+        <h2 id="greeting" class="header-greeting">Welcome!</h2>
         <h1 class="header-title">Attendance Calculator</h1>
         <p class="header-subtitle">
           Plan your attendance with precision. Calculate how many classes you
           can skip or need to attend to reach your target.
         </p>
-        <div class="tags">
-          <span class="tag">Smart Planning</span>
-          <span class="tag">Academic Success</span>
-          <span class="tag">Time Management</span>
-          <span class="tag">Goal Tracking</span>
-        </div>
       </header>
 
       <!-- Calculator Card -->
@@ -171,10 +144,14 @@
             </svg>
             Calculate Your Attendance
           </h2>
-          <p class="card-description">
-            Enter your current attendance data to get personalized
-            recommendations
-          </p>
+          <div class="how-to-use">
+            <p><strong>How it works:</strong></p>
+            <ol>
+              <li>Enter the total classes held so far.</li>
+              <li>Enter how many you've attended.</li>
+              <li>Pick your target attendance percentage.</li>
+            </ol>
+          </div>
         </div>
 
         <form id="attendanceForm">
@@ -319,30 +296,6 @@
             </div>
           </div>
 
-          <!-- Features -->
-          <div class="footer-section">
-            <h4>Features</h4>
-            <div class="footer-links">
-              <a href="#" class="footer-link">Attendance Calculator</a>
-              <a href="#" class="footer-link">Target Planning</a>
-              <a href="#" class="footer-link">Progress Tracking</a>
-              <a href="#" class="footer-link">Smart Recommendations</a>
-              <a href="#" class="footer-link">Mobile Responsive</a>
-            </div>
-          </div>
-
-          <!-- Resources -->
-          <div class="footer-section">
-            <h4>Resources</h4>
-            <div class="footer-links">
-              <a href="#" class="footer-link">Documentation</a>
-              <a href="#" class="footer-link">Tutorials</a>
-              <a href="#" class="footer-link">Best Practices</a>
-              <a href="#" class="footer-link">FAQs</a>
-              <a href="#" class="footer-link">Support</a>
-            </div>
-          </div>
-
           <!-- Connect -->
           <div class="footer-section">
             <h4>Connect</h4>
@@ -369,7 +322,10 @@
             <h4>Our Services</h4>
             <div class="footer-links">
               <a href="https://cash-online.vercel.app/" class="footer-link" target="_blank" rel="noopener noreferrer">💰 Digital to Cash Conversion</a>
-              <p class="footer-service-desc">Convert digital money to cash and vice versa instantly</p>
+              <p class="footer-service-desc">Convert digital money to cash instantly</p>
+              
+              <a href="https://loan-lense.vercel.app/" class="footer-link" target="_blank" rel="noopener noreferrer" style="margin-top: 0.5rem;">🏦 Loan Approval</a>
+              <p class="footer-service-desc">Get fast loan approvals</p>
             </div>
           </div>
         </div>

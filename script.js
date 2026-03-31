@@ -284,4 +284,19 @@ class AttendanceCalculator {
 // Initialize the calculator when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new AttendanceCalculator();
+    
+    // Set dynamic greeting based on time of day
+    const greetingEl = document.getElementById('greeting');
+    if (greetingEl) {
+        const hour = new Date().getHours();
+        let greeting = "Welcome!";
+        if (hour >= 5 && hour < 12) {
+            greeting = "Good Morning! 🌅";
+        } else if (hour >= 12 && hour < 17) {
+            greeting = "Good Afternoon! ☀️";
+        } else if (hour >= 17 || hour < 5) {
+            greeting = "Good Evening! 🌙";
+        }
+        greetingEl.textContent = greeting;
+    }
 });
